@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictado</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Water+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="caja">
+        <h2>Registro de caso</h2>
+        <div class="pull-right">
+        <form class="formulario1" name="dictado"> 
+            <label for="num_caso">Número de caso:</label>
+            <input type="text" name="num_caso" id="num_caso" placeholder="Número de caso" value="">
+                <br>
+            <label for="nombre_inst">Nombre de instalación:</label>
+            <input type="text" name="nombre_inst" id="nombre_inst" placeholder="Nombre de instalación" value="">    
+            <br>
+            <label for="num_inst">Número de instalación:</label>
+            <input type="text" name="num_inst" id="num_inst" placeholder="Número de instalacion" value=""> 
+            <br>
+            <label for="tipo_emergencia">Tipo de emergencia:</label>
+            <select list="tipos_emergencia" name="tipo_emergencia" id="tipo_emergencia">
+                <option value="_fuga">Fuga de gas</option>
+                <option value="_noPase">No pase de gas</option> 
+                <option value="_bajaPresion">Baja presión</option>
+                <option value="_tuberia">Problemas con tubería</option>
+                <option value="_valvula">Problemas con la valvula</option>
+                <option value="_balonFalla">Balón con falla</option>
+                <option value="_congelado">Congelamiento de línea de GLP</option>
+                <option value="_otros">Otros reclamos por producto</option>
+                <option value="_dial">Problemas con dial de medición</option>
+                <option value="_manometro">Problemas con el manómetro</option>
+                <option value="_medidor">Problemas con el medidor</option>
+                <option value="_regulador">Problemas con el regulador</option>
+                <option value="_vap">Problemas con el vaporizador</option>
+                <option value="_tanque">Problemas en el tanque</option>
+                <option value="_sobreTanque">Sobrellenado de tanque</option>
+            </select>
+            <br>
+        </form>
+        <button id="btn1" class="btn1" name="btn1" onclick="generarAsunto()">Generar asunto</button>
+    </div>
+    </section>  
+
+    <section class="caja2">
+        <h2>Datos para dictado</h2>
+        <label for="persona_contacto">Contacto:</label>        
+        <input type="text" name="persona_contacto" id="persona_contacto" placeholder="Persona de contacto">
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
+        <br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+        <br>
+        <label for="referencia">Referencia:</label>
+        <input type="text" name="referencia" id="referencia" placeholder="Referencia">
+        <br>
+        <label for="medidor">Medidor:</label>
+        <input type="text" name="medidor" id="medidor" placeholder="Medidor">
+        <br>
+        <label for="canal">Canal:</label>
+        <select list="canal" name="canal" id="canal">
+            <option value="_DC">DC</option>
+            <option value="_CA">CA</option>
+            <option value="_AU">AU</option>
+            <option value="_SI">SI</option>
+            <option value="_DS">DS</option>
+        </select>
+        <br>
+        <label for="observacion">Observación del cliente:</label>
+        <input type="text" name="observacion" id="observacion" placeholder="Observacion del cliente">
+        <br>
+        <button id="btn2" onclick="generarDictado()">Generar dictado</button>
+    </section>
+
+    <section class="caja3">
+        <h2>Envío de correo:</h2>
+        <label for="recibido">Recibido por:</label>
+        <input type="text" name="recibido" id="recibido" placeholder="Nombre de coordinador">
+        <br>
+        <label for="hora">Hora de dictado: </label>
+        <input type="time" name="hora" id="hora" placeholder="Nombre de coordinador">
+        <br>
+        <button id="btn3" onclick="generarCorreo()">Generar correo</button>
+        <button id="btn4" onclick="console.clear()">Limpiar</button>
+    </section>
+</body>
+</html>
