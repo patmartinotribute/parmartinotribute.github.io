@@ -1,0 +1,25 @@
+body {
+    background-color: #444;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 510px;
+}
+canvas {
+    /* width: 500px;
+    height: 500px; */
+    border: 2px solid white;
+    margin: 0 auto;
+    background-color: rgb(30, 34, 37);
+    /* background: linear-gradient(
+        0deg,
+        rgba(0, 102, 204, 1.0) 0%,
+        rgba(125, 60, 152, 1.0) 100%
+      ); */
+    z-index: -1;
+}
