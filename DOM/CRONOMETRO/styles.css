@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-color: #030303;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #030303 20%, #030303 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #030303 20%, #030303 80%, transparent 80%, transparent) 27.5px 27.5px, linear-gradient(#252527 2.2px, transparent 2.2px) 0 -1.1px, linear-gradient(90deg, #252527 2.2px, #030303 2.2px) -1.1px 0;
+  background-size: 55px 55px, 55px 55px, 27.5px 27.5px, 27.5px 27.5px;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 600px;
+  min-height: 300px;
+  background-color: aliceblue;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: #030303;
+  opacity: 1;
+  background: linear-gradient(135deg, #332e3355 25%, transparent 25%) -15px 0/ 30px 30px, linear-gradient(225deg, #332e33 25%, transparent 25%) -15px 0/ 30px 30px, linear-gradient(315deg, #332e3355 25%, transparent 25%) 0px 0/ 30px 30px, linear-gradient(45deg, #332e33 25%, #030303 25%) 0px 0/ 30px 30px;
+}
+
+.button-cont {
+  padding: 20px;
+}
+
+#cronometro {
+  width: 100%;
+  font-size: 80px;
+  font-weight: bold;
+  user-select: none;
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+  
+}
+
+.boton {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#inicio-pausa.iniciar,
+#inicio-pausa.iniciar i {
+  background-color: #08e008;
+}
+
+#inicio-pausa.pausar,
+#inicio-pausa.pausar i {
+  background-color: #ffdc00;
+}
+
+#reiniciar {
+  background-color: red;
+}
+a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+}
+footer {
+  padding-top: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 10px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+}
+
