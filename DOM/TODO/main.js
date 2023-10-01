@@ -3,6 +3,8 @@ const input = document.getElementById('agregar') //input de texto -- acceder al 
 const boton = document.getElementById('crear') // boton
 const lista = document.getElementById('lista-tareas') // contenedor de tareas
 
+// contexto de iconos
+
 function agregarTarea() {
   if (input.value) { // esta comprobacion devuelve false si es vacía la cadena
 
@@ -20,12 +22,24 @@ function agregarTarea() {
     icon.classList.add('iconos')
     tareaNueva.appendChild(icon)
 
+    function completarTarea (e) { // selecciona el elemento donde ocurre el evento y agrega sino existe, o elimina si existe la clase al elem
+      let elem = e.target.parentNode.parentNode
+      elem.classList.toggle('completada') 
+    }
+
+    function eliminarTarea (e) { // selecciona el elemento donde ocurre el evento elimina su contenedor abuelo
+      let elem = e.target.parentElement.parentElement
+      elem.remove()
+    }
+
     // iconos
     let completar = document.createElement('i')
     completar.classList.add('bi', 'bi-check-circle-fill', 'icono-completar')
+    completar.addEventListener('click', completarTarea)  
 
     let eliminar = document.createElement('i')
     eliminar.classList.add('bi', 'bi-trash3-fill', 'icono-eliminar')
+    eliminar.addEventListener('click', eliminarTarea)
 
     icon.append(completar,eliminar) // agrega los iconos al elemento icon
 
@@ -35,6 +49,14 @@ function agregarTarea() {
     alert('Ingresa una tarea primero')
   }
 }
-
-//listener para pruebas de desarrollo
+// agregar tardea al dom al hacer clic en agregar
 boton.addEventListener('click', agregarTarea )
+
+// agregar tardea al dom al pulsar enter
+input.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter') {
+    agregarTarea()
+  }
+  }
+)
+
