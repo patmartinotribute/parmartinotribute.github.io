@@ -19,7 +19,9 @@ body {
 .container {
   width: 700px;
   min-height: 500px;
-  background-color: white;
+  background-color: #030303;
+  opacity: 1;
+  background: linear-gradient(135deg, #332e3355 25%, transparent 25%) -15px 0/ 30px 30px, linear-gradient(225deg, #332e33 25%, transparent 25%) -15px 0/ 30px 30px, linear-gradient(315deg, #332e3355 25%, transparent 25%) 0px 0/ 30px 30px, linear-gradient(45deg, #332e33 25%, #030303 25%) 0px 0/ 30px 30px;
   padding: 40px;
   border: 2px solid black;
   border-radius: 50px;
@@ -32,6 +34,9 @@ body {
 h1 {
   font-size: 50px;
   font-weight: bold;
+  align-items: center;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 10px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
 }
 
 input {
@@ -107,4 +112,21 @@ i {
 .icono-completar:hover,
 .icono-eliminar:hover {
   color: rgba(255,255,255, 0.523)
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ebffff;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 10px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
 }
