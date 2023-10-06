@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = ./pokedex
+  url = https://github.com/carpicoder/pokedex.git
